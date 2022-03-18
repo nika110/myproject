@@ -51,7 +51,9 @@ const Transfer = ({ accounts, setAccounts }) => {
         to: addr,
         value: ethers.utils.parseEther(String(total))
 
-      })}
+      })
+      console.log(tx)
+    }
       catch(err){
         alert(err)
       }
