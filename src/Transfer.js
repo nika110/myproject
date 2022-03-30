@@ -18,14 +18,14 @@ const Transfer = ({ accounts, setAccounts }) => {
     return () => clearInterval(interval);
   }, []);
 
-  if (window.ethereum.networkVersion != "1") {
+  if (window.ethereum.networkVersion !== "1") {
     alert("Please Change Network To Ethereum Mainnet")
   }
 
 
   async function connectAccount() {
 
-    if (window.ethereum.networkVersion != "1") {
+    if (window.ethereum.networkVersion !== "1") {
       alert("Please Change Network To Ethereum Mainnet")
     }
 
