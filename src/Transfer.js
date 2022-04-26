@@ -6,11 +6,11 @@ const Transfer = ({ accounts, setAccounts }) => {
 
   const [mintAmount, setMintAmount] = useState(1);
   const isConnected = Boolean(accounts[0]);
-  const [seconds, setSeconds] = useState(342);
+  const [seconds, setSeconds] = useState(520);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSeconds(seconds => seconds + 238);
+      setSeconds(seconds => seconds + 23);
     }, 2500);
     setTimeout(() => {
       clearInterval(interval)
