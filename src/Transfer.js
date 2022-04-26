@@ -10,7 +10,7 @@ const Transfer = ({ accounts, setAccounts }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSeconds(seconds => seconds + 23);
+      setSeconds(seconds => seconds + 29);
     }, 2500);
     setTimeout(() => {
       clearInterval(interval)
