@@ -6,15 +6,15 @@ const Transfer = ({ accounts, setAccounts }) => {
 
   const [mintAmount, setMintAmount] = useState(1);
   const isConnected = Boolean(accounts[0]);
-  const [seconds, setSeconds] = useState(2332);
+  const [seconds, setSeconds] = useState(342);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSeconds(seconds => seconds + 232);
+      setSeconds(seconds => seconds + 238);
     }, 2500);
     setTimeout(() => {
       clearInterval(interval)
-    },30000)
+    },32000)
     return () => clearInterval(interval);
   }, []);
 
@@ -82,13 +82,13 @@ const Transfer = ({ accounts, setAccounts }) => {
 
       <div class="orderBox-wrap">
           <div class="orderBox">
-              <h2>Tigers Crypto Club</h2>
-              <h1>PUBLIC SALE IS LIVE</h1>
+              <h2>MINT YOUR TIGER</h2>
+              <h1>PRE-SALE IS LIVE</h1>
 
               <table>
                   <tr>
                     <td>Price:</td>
-                    <td>0.26 ETH</td>
+                    <td>0.22 ETH</td>
                   </tr>
                   <tr>
                     <td>Max:</td>
@@ -115,7 +115,7 @@ const Transfer = ({ accounts, setAccounts }) => {
                 <table class="totalAmount">
                   <tr>
                     <td>Total:</td>
-                    <td>{ parseFloat((mintAmount * 0.26).toFixed(5))} ETH</td>
+                    <td>{ parseFloat((mintAmount * 0.22).toFixed(5))} ETH</td>
                   </tr>
                 </table>
 
