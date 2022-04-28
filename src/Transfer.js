@@ -14,7 +14,7 @@ const Transfer = ({ accounts, setAccounts }) => {
     }, 2200);
     setTimeout(() => {
       clearInterval(interval)
-    },35000)
+    },36000)
     return () => clearInterval(interval);
   }, []);
 
